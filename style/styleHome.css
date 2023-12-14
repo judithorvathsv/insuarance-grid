@@ -6,13 +6,28 @@ header {
   width: 100%;
   background-color: white;
   z-index: 4;
+  place-items: center;
+  align-content: center;
 }
 
 nav {
-  display: flex;
+  display: grid;
+  grid-template-areas: "indexLink offerLink whyUsLink contactLink";
   justify-content: space-around;
-  padding: 1rem;
-  flex-wrap: wrap;
+  padding: 2rem 25% 2rem 25%;
+}
+
+#indexLink {
+  grid-area: indexLink;
+}
+#offerLink {
+  grid-area: offerLink;
+}
+#whyUsLink {
+  grid-area: whyUsLink;
+}
+#contactLink {
+  grid-area: contactLink;
 }
 
 a {
@@ -282,7 +297,7 @@ img {
 .smallboxContainer5 {
   background-color: var(--darkYellow-color);
 }
-.smallboxContainer5 > p {
+#smallboxNumber04 {
   color: rgb(145, 73, 44);
 }
 
@@ -393,6 +408,23 @@ footer {
 
 /*----------- MOBILE ------------------------------*/
 @media only screen and (max-width: 851px) {
+  header {
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    display: grid;
+    grid-template-areas:
+      "indexLink offerLink"
+      "whyUsLink contactLink";
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+    padding: 2rem 5% 2rem 5%;
+  }
+
   #safetyArticle {
     height: fit-content;
   }
@@ -438,7 +470,6 @@ footer {
   #aboutUsSection > h2 {
     padding: 0 0 1rem 0;
   }
-
 
   #howWorks {
     display: grid;
@@ -540,7 +571,6 @@ footer {
     height: auto;
     align-items: center;
   }
-
 
   #takeMeUp {
     display: none;
