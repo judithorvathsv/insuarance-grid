@@ -86,40 +86,62 @@ main {
 #onMindSection {
   background-color: var(--grey-color);
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  padding: 2rem 0 2rem 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "leftSideOnMind rightSideOnMind";
 }
 
 #leftSideOnMind {
-  width: 100%;
-  display: flex;
-  margin: 3rem 10% 3rem 10%;
+  grid-area: leftSideOnMind;
+  display: grid;
+  margin: 3rem 20% 3rem 10%;
   justify-content: center;
 }
 
+#leftSideOnMind > h2 {
+  width: 70%;
+}
+
 #rightSideOnMind {
-  width: 100%;
+  grid-area: rightSideOnMind;
   border-radius: 5px;
-  margin: 3rem 10% 3rem 10%;
-  display: flex;
-  flex-direction: column;
+  margin: 6rem 30% 3rem 0;
+  display: grid;
+  grid-template-areas:
+    "emailLabel"
+    "email"
+    "messageLabel"
+    "message"
+    "sendButton";
   color: white;
+  row-gap: 0.5rem;
 }
 
-input,
-textarea {
-  border: 1px solid white;
-  border-radius: 2px;
+#emailLabel {
+  grid-area: emailLabel;
 }
-
-input {
+#email {
+  grid-area: email;
   height: 2rem;
   margin-bottom: 1rem;
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 1rem 0 1rem 0;
 }
-
-button {
-  align-self: flex-end;
+#messageLabel {
+  grid-area: messageLabel;
+}
+#message {
+  grid-area: message;
+  border: 1px solid white;
+  border-radius: 2px;
+  margin-bottom: -2rem;
+}
+#sendButton {
+  grid-area: sendButton;
+  margin-bottom: 3rem;
+  align-self: self-end;
+  justify-self: end;
 }
 
 /*----------- visit section --------------*/
@@ -286,30 +308,42 @@ footer {
   }
 
   #onMindSection {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    background-color: var(--grey-color);
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "leftSideOnMind"
+      "rightSideOnMind";
   }
 
   #leftSideOnMind {
-    margin: 3rem 0 0 2rem;
-    padding: 0;
-    width: fit-content;
+    grid-area: leftSideOnMind;
+    display: grid;
+    margin: 3rem 20% 3rem 10%;
+    justify-content: center;
   }
 
   #leftSideOnMind > h2 {
-    word-break: break-word;
+    width: 100%;
   }
 
   #rightSideOnMind {
-    width: fit-content;
+    width: 80%;
     border-radius: 5px;
     padding: 1rem;
     margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+  }
+
+  #message {
+    margin-bottom: 0rem;
+  }
+
+  #sendButton {
+    grid-area: sendButton;
+    margin-bottom: 3rem;
+    align-self: self-end;
+    justify-self: end;
   }
 
   #visitUs {

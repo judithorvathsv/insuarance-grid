@@ -17,10 +17,10 @@
     <script>
         /* Keep this code if the middle header is not neccessary!
         */
-/*         $(window).scroll(function () {
-            if ($(this).scrollTop() > 100) { $('header').show(1000); }
-            else { $('header').hide(1000); }
-        });  */
+        /*         $(window).scroll(function () {
+                    if ($(this).scrollTop() > 100) { $('header').show(1000); }
+                    else { $('header').hide(1000); }
+                });  */
     </script>
 </head>
 
@@ -56,11 +56,11 @@
                 <h2>Whats on your mind?</h2>
             </div>
             <div id="rightSideOnMind">
-                <label for="email">Your email</label>
+                <label for="email" id="emailLabel">Your email</label>
                 <input type="email" name="email" id="email">
-                <label for="message">Your message</label>
-                <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                <button>SEND MESSAGE</button>
+                <label for="message" id="messageLabel">Your message</label>
+                <textarea name="message" id="message" cols="30" rows="15"></textarea>
+                <button id="sendButton">SEND MESSAGE</button>
             </div>
         </section>
 
