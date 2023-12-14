@@ -16,10 +16,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         /* Keep this code if the middle header is not neccessary!
-              $(window).scroll(function () {
-                    if ($(this).scrollTop() > 100) { $('header').show(1000);   } 
-                    else { $('header').hide(1000);  }
-                }); */
+        */
+/*         $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) { $('header').show(1000); }
+            else { $('header').hide(1000); }
+        });  */
     </script>
 </head>
 
@@ -33,18 +34,18 @@
 
     <header class="box">
         <nav>
-            <a href="/index.html">Home</a>
-            <a href="/Home.html">Our offer</a>
-            <a href="/Home.html">Why us</a>
+            <a href="/index.html" id="indexLink">Home</a>
+            <a href="/Home.html" id="offerLink">Our offer</a>
+            <a href="/Home.html" id="whyUsLink">Why us</a>
             <a href="/Contact.html" id="contactLink">Contact</a>
         </nav>
     </header>
 
     <header id="fixedHeader">
         <nav>
-            <a href="/Home.html">Home</a>
-            <a href="/index.html">Our offer</a>
-            <a href="#">Why us</a>
+            <a href="/index.html" id="indexLink">Home</a>
+            <a href="/Home.html" id="offerLink">Our offer</a>
+            <a href="/Home.html" id="whyUsLink">Why us</a>
             <a href="/Contact.html" id="contactLink">Contact</a>
         </nav>
     </header>
@@ -77,26 +78,33 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </main>
+
     <footer>
         <div id="footerContainer">
-            <div class="footerItem">
+            <div class="footerItem" id="navInfo">
                 <h2>Nav</h2>
-                <span>Products</span>
-                <span>About Us</span>
-                <span>Contact</span>
+                <div class="footerInfo footerInfoInRow">
+                    <span>Products</span>
+                    <span>About Us</span>
+                    <span>Contact</span>
+                </div>
             </div>
-            <div class="footerItem">
+
+            <div class="footerItem" id="addressInfo">
                 <h2>Address</h2>
-                <span>Plinkeplonkvägen 32</span>
-                <span>888 81 Klonkberga</span>
+                <div class="footerInfo footerInfoInRow">
+                    <span>Plinkeplonkvägen 32</span>
+                    <span>888 81 Klonkberga</span>
+                </div>
             </div>
-            <div class="footerItem">
+
+            <div class="footerItem" id="socialMediaInfo">
                 <h2>Social Media</h2>
-                <div id="socialMediaItems">
-                    <img src="/img/logo-twitter.svg" alt="twitter">
-                    <img src="/img/logo-facebook.svg" alt="facebook">
-                    <img src="/img/logo-linkedin.svg" alt="linkedin">
-                    <img src="/img/logo-instagram.svg" alt="instagram">
+                <div class="footerInfo" id="socialMediaItems">
+                    <img src="./img/logo-twitter.svg" alt="twitter">
+                    <img src="./img/logo-facebook.svg" alt="facebook">
+                    <img src="./img/logo-linkedin.svg" alt="linkedin">
+                    <img src="./img/logo-instagram.svg" alt="instagram">
                 </div>
             </div>
         </div>
