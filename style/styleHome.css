@@ -439,14 +439,6 @@ footer {
     padding: 0 0 1rem 0;
   }
 
-  /*
-  
-
-
----------------------- nere
- 
-  
-  */
 
   #howWorks {
     display: grid;
@@ -549,12 +541,6 @@ footer {
     align-items: center;
   }
 
-  /*---------------------- uppe
-
-
-  
-  
-  */
 
   #takeMeUp {
     display: none;
