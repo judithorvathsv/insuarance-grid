@@ -1,0 +1,593 @@
+/*-----------header --------------*/
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 4;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  min-width: 12rem;
+}
+
+#offerLink {
+  font-weight: bold;
+}
+
+/*-----------main --------------*/
+
+main {
+  display: grid;
+  grid-template-areas:
+    "safetyArticle"
+    "aboutUsSection"
+    "howWorks"
+    "takeMeUp";
+  grid-template-columns: 1fr;
+  position: relative;
+}
+
+#safetyArticle {
+  height: max-content;
+  padding: 0 7% 0 7%;
+  background-color: var(--grey-color);
+  width: 86%;
+}
+
+#safetySection {
+  display: grid;
+  grid-template-areas: "leftSafety rightSafety";
+  justify-content: space-around;
+  column-gap: 15rem;
+  padding-top: 8rem;
+}
+
+#leftSafety {
+  grid-area: leftSafety;
+  display: grid;
+  grid-template-areas: "safetyTitle" "safetyButton";
+}
+
+#leftSafety > h2 {
+  grid-area: safetyTitle;
+}
+
+#leftSafety > button {
+  margin-left: 0;
+  grid-area: safetyButton;
+}
+
+#joinLink {
+  color: black;
+  text-decoration: none;
+}
+
+#rightSafety {
+  grid-area: rightSafety;
+}
+
+#rightSafety > p {
+  text-align: left;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+/* -------- Card section -------- */
+
+#cardSection {
+  display: grid;
+  grid-template-areas: "card1 card2 card3";
+  grid-template-columns: repeat(3, 20%);
+  grid-template-rows: repeat(auto-fit, minmax(25rem, auto-fit));
+  justify-content: center;
+  column-gap: 5rem;
+  background-color: var(--grey-color);
+  position: relative;
+  top: 12rem;
+}
+
+#card1 {
+  grid-area: card1;
+}
+
+#card2 {
+  grid-area: card2;
+}
+
+#card3 {
+  grid-area: card3;
+}
+
+.card {
+  border: 1px solid white;
+  border-radius: 5px;
+  z-index: 2;
+  background-color: white;
+  display: grid;
+  grid-template-areas: "imageDiv" "cardTitle" "cardText";
+  align-items: center;
+  padding: 0 1rem 0 1rem;
+}
+
+.imageDiv {
+  grid-area: imageDiv;
+  width: 90%;
+  height: 12rem;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  display: grid;
+  justify-content: center;
+}
+
+#image1div {
+  background-color: var(--blue-color);
+}
+
+#image2div {
+  background-color: var(--yellow-color);
+}
+
+#image3div {
+  background-color: var(--darkYellow-color);
+}
+
+img {
+  height: 35rem;
+  padding-top: 1rem;
+}
+
+#childPicture {
+  height: 14rem;
+}
+
+.card > p:first-of-type {
+  grid-area: cardTitle;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 1rem 0 1rem 0;
+  margin: -0.5rem 0 -0.5rem 0;
+}
+
+.card > p {
+  grid-area: cardText;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.card > p:nth-of-type(2) {
+  padding-bottom: 2rem;
+}
+
+/* -------- About us -------- */
+#aboutUsSection {
+  z-index: 1;
+  background-color: var(--yellow-color);
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "aboutTitle" "aboutTextLong" "aboutTextShort";
+  align-content: center;
+  text-align: center;
+  padding: 3rem 30% 3rem 30%;
+}
+
+#aboutUsSection > h2 {
+  grid-area: aboutTitle;
+  position: relative;
+  top: 5rem;
+  padding: 0rem 0 3rem 0;
+  text-align: center;
+}
+
+#aboutUsSection > p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  position: relative;
+  top: 5rem;
+}
+
+/* -------- How works section -------- */
+
+#howWorks {
+  display: grid;
+  grid-template-areas:
+    "boxContainer1"
+    "boxContainer2";
+  height: fit-content;
+}
+
+#boxContainer1 {
+  grid-area: boxContainer1;
+}
+#boxContainer2 {
+  grid-area: boxContainer2;
+}
+
+#boxContainer1 {
+  display: grid;
+  grid-template-areas: "smallboxContainer1 smallboxContainer2 smallboxContainer3";
+  grid-template-columns: repeat(3, 33.33%);
+  grid-template-rows: 33.33vw;
+}
+
+#boxContainer2 {
+  display: grid;
+  grid-template-areas: "smallboxContainer4 smallboxContainer5 smallboxContainer6";
+  grid-template-columns: repeat(3, 33.33%);
+  grid-template-rows: 33.33vw;
+}
+
+.smallboxContainer1 {
+  grid-area: smallboxContainer1;
+}
+.smallboxContainer2 {
+  grid-area: smallboxContainer2;
+}
+.smallboxContainer3 {
+  grid-area: smallboxContainer3;
+}
+.smallboxContainer4 {
+  grid-area: smallboxContainer4;
+}
+.smallboxContainer5 {
+  grid-area: smallboxContainer5;
+}
+.smallboxContainer6 {
+  grid-area: smallboxContainer6;
+}
+
+.smallboxContainer1,
+.smallboxContainer2,
+.smallboxContainer3,
+.smallboxContainer4,
+.smallboxContainer5,
+.smallboxContainer6 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+.smallboxContainer1 {
+  background-color: var(--blue-color);
+  height: auto;
+}
+
+.smallboxContainer2,
+.smallboxContainer4,
+.smallboxContainer6 {
+  background-color: white;
+}
+
+.smallboxContainer3 {
+  background-color: rgb(235, 235, 235);
+}
+.smallboxContainer5 {
+  background-color: var(--darkYellow-color);
+}
+.smallboxContainer5 > p {
+  color: rgb(145, 73, 44);
+}
+
+.smallBoxInContainer > p {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--grey-color);
+  padding: 0 15% 15% 5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.smallBoxInContainer > h3 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 15%;
+}
+
+.smallBoxInContainer > div {
+  text-align: center;
+  margin: 0 3rem 0 3rem;
+}
+
+/* -------- Take me up button -------- */
+
+#takeMeUp {
+  display: grid;
+  align-items: center;
+  background-color: var(--grey-color);
+}
+
+#upButton {
+  display: grid;
+  grid-template-areas: "upSign" "upText";
+  color: black;
+  font-weight: bold;
+}
+
+#upSign {
+  grid-area: upSign;
+  text-align: center;
+}
+
+#upText {
+  grid-area: upText;
+  text-align: center;
+}
+
+/* ----------------- Footer ----------------- */
+
+footer {
+  color: white;
+  background-color: rgb(119, 117, 116);
+  font-size: 1.5rem;
+}
+
+#footerContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "navInfo"
+    "addressInfo"
+    "socialMediaInfo";
+  align-content: center;
+  justify-items: center;
+}
+
+.footerItem {
+  display: grid;
+  grid-template-rows: 0.7fr 3fr;
+  grid-template-areas:
+    "footerColumnTitle"
+    "footerColumnInfo";
+  margin-top: 2rem;
+}
+
+.footerItem > h2 {
+  grid-area: footerColumnTitle;
+  font-size: 1.5rem;
+}
+
+.footerItem > span {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgb(230, 230, 230);
+}
+
+.footerInfo {
+  grid-area: footerColumnInfo;
+  color: rgb(223, 223, 223);
+}
+
+.footerInfoInRow {
+  display: grid;
+  grid-template-rows: repeat(3, 1.7rem);
+}
+
+#socialMediaItems {
+  justify-content: space-between;
+}
+
+#socialMediaItems > img {
+  width: 2rem;
+  height: fit-content;
+}
+
+/*----------- MOBILE ------------------------------*/
+@media only screen and (max-width: 851px) {
+  #safetyArticle {
+    height: fit-content;
+  }
+
+  #safetySection {
+    display: grid;
+    grid-template-areas: "leftSafety" "rightSafety";
+    padding-top: 8rem;
+  }
+
+  button {
+    display: none;
+  }
+
+  #leftSafety {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #rightSafety {
+    padding-top: 1rem;
+  }
+
+  #cardSection {
+    display: grid;
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3";
+    grid-template-columns: 80%;
+    row-gap: 4rem;
+    align-items: center;
+    margin-bottom: 19rem;
+    height: fit-content;
+    top: 6rem;
+  }
+
+  #aboutUsSection {
+    height: auto;
+    padding: 1rem 10% 10rem 10%;
+  }
+
+  #aboutUsSection > h2 {
+    padding: 0 0 1rem 0;
+  }
+
+  /*
+  
+
+
+---------------------- nere
+ 
+  
+  */
+
+  #howWorks {
+    display: grid;
+    grid-template-areas:
+      "boxContainer1"
+      "boxContainer2";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    height: auto;
+  }
+
+  #boxContainer1 {
+    grid-area: boxContainer1;
+  }
+  #boxContainer2 {
+    grid-area: boxContainer2;
+  }
+
+  #boxContainer1 {
+    display: grid;
+    grid-template-areas:
+      "smallboxContainer1"
+      "smallboxContainer2"
+      "smallboxContainer3";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    height: auto;
+  }
+
+  #boxContainer2 {
+    display: grid;
+    grid-template-areas:
+      "smallboxContainer4"
+      "smallboxContainer5"
+      "smallboxContainer6";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    height: auto;
+  }
+
+  .smallboxContainer1 {
+    grid-area: smallboxContainer1;
+  }
+  .smallboxContainer2 {
+    grid-area: smallboxContainer2;
+  }
+  .smallboxContainer3 {
+    grid-area: smallboxContainer3;
+  }
+  .smallboxContainer4 {
+    grid-area: smallboxContainer4;
+  }
+  .smallboxContainer5 {
+    grid-area: smallboxContainer5;
+  }
+  .smallboxContainer6 {
+    grid-area: smallboxContainer6;
+  }
+
+  .smallboxContainer1,
+  .smallboxContainer2,
+  .smallboxContainer3,
+  .smallboxContainer4,
+  .smallboxContainer5,
+  .smallboxContainer6 {
+    display: grid;
+    grid-template-areas:
+      "smallBoxNumber"
+      "smallBoxText";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-items: center;
+    min-height: 33.33vw;
+    height: auto;
+    position: relative;
+  }
+
+  .smallBoxInContainer > p {
+    grid-area: smallBoxNumber;
+    font-size: 1.7rem;
+    padding: 0 15% 15% 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .smallboxContainer1 > h3 {
+    word-break: break-word;
+  }
+
+  .smallBoxInContainer > div {
+    grid-area: smallBoxText;
+    font-size: 1.5rem;
+    line-height: 1;
+    word-break: break-word;
+    margin: 0 3rem 0 3rem;
+    min-height: fit-content;
+    height: auto;
+    align-items: center;
+  }
+
+  /*---------------------- uppe
+
+
+  
+  
+  */
+
+  #takeMeUp {
+    display: none;
+  }
+
+  footer {
+    grid-area: footer;
+    height: auto;
+  }
+
+  #footerContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "navInfo"
+      "addressInfo"
+      "socialMediaInfo";
+  }
+
+  .footerItem {
+    max-height: 9rem;
+    justify-items: center;
+  }
+
+  #socialMediaItems {
+    display: grid;
+    grid-template-areas: "twitter facebook linkedin instagram";
+    justify-content: space-between;
+  }
+
+  #socialMediaItems > img {
+    width: 2rem;
+    height: fit-content;
+    margin-top: -1rem;
+  }
+}
